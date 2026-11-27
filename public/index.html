@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -285,6 +284,52 @@
                 height: 250px;
             }
         }
+
+        /* IMAGENS DA SEÇÃO SOBRE */
+        .ad-about .card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .ad-about .card img {
+                height: 230px;
+            }
+        }
+
+        /* MENU MINHA CONTA */
+        .navbar .dropdown-menu {
+            background-color: #1b1419;
+            border: 1px solid #713047;
+            border-radius: 8px;
+            padding: 8px;
+            min-width: 170px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .navbar .dropdown-menu .dropdown-item {
+            color: #f2dce5;
+            padding: 10px 12px;
+            border-radius: 5px;
+            transition: 0.2s;
+        }
+
+        .navbar .dropdown-menu .dropdown-item:hover,
+        .navbar .dropdown-menu .dropdown-item:focus {
+            background-color: #713047;
+            color: #ffffff;
+        }
+
+        .navbar .dropdown-menu .dropdown-divider {
+            border-color: #713047;
+        }
+
+        .navbar .dropdown-toggle:focus {
+            box-shadow: none;
+        }
     </style>
 </head>
 
@@ -292,7 +337,6 @@
 
     <header>
 
-        <!-- MENU DO PROFESSOR ADAPTADO -->
         <section name="navbar-site">
 
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top ad-navbar">
@@ -303,8 +347,8 @@
                         ANGEL DARK
                     </a>
 
-                    <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal">
 
                         <span class="navbar-toggler-icon"></span>
 
@@ -351,8 +395,7 @@
                         <!-- MENU DA CONTA -->
                         <div class="dropdown ms-lg-3 mt-3 mt-lg-0">
 
-                            <button class="btn ad-button dropdown-toggle"
-                                type="button" data-bs-toggle="dropdown">
+                            <button class="btn ad-button dropdown-toggle" type="button" data-bs-toggle="dropdown">
 
                                 <i class="bi bi-person-circle"></i>
                                 Minha conta
@@ -378,7 +421,10 @@
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="#login">
+                                    <a class="dropdown-item"
+                                        href="#offcanvasNavbar"
+                                        data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasNavbar">
                                         Entrar
                                     </a>
                                 </li>
@@ -388,10 +434,8 @@
                         </div>
 
                         <!-- BOTÃO DO MENU LATERAL -->
-                        <button class="navbar-toggler ms-2" type="button"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasNavbar"
-                            aria-controls="offcanvasNavbar">
+                        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 
                             <i class="bi bi-list"></i>
 
@@ -404,15 +448,13 @@
             </nav>
 
             <!-- LOGIN LATERAL -->
-            <div class="offcanvas offcanvas-end ad-offcanvas"
-                tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas offcanvas-end ad-offcanvas" tabindex="-1" id="offcanvasNavbar">
 
                 <div class="offcanvas-header">
 
                     <h4>ANGEL DARK</h4>
 
-                    <button type="button" class="btn-close btn-close-white"
-                        data-bs-dismiss="offcanvas"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
 
                 </div>
 
@@ -430,8 +472,7 @@
                                 E-mail
                             </label>
 
-                            <input type="email" class="form-control"
-                                id="emailLogin" placeholder="Seu e-mail">
+                            <input type="email" class="form-control" id="emailLogin" placeholder="Seu e-mail">
 
                         </div>
 
@@ -441,15 +482,13 @@
                                 Senha
                             </label>
 
-                            <input type="password" class="form-control"
-                                id="senhaLogin" placeholder="Sua senha">
+                            <input type="password" class="form-control" id="senhaLogin" placeholder="Sua senha">
 
                         </div>
 
                         <div class="d-grid gap-2">
 
-                            <button class="btn ad-button" type="button"
-                                onclick="intializeLogin()">
+                            <button class="btn ad-button" type="button" onclick="intializeLogin()">
 
                                 Entrar
 
@@ -482,75 +521,50 @@
 
     <main>
 
-        <!-- CARROSSEL ORIGINAL DO PROFESSOR -->
         <section name="slide-show" id="inicio">
 
             <div class="container ad-carousel">
 
-                <div id="carouselExampleIndicators" class="carousel slide"
-                    data-bs-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-indicators">
 
-                        <button type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active"></button>
 
-                        <button type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
 
-                        <button type="button"
-                            data-bs-target="#carouselExampleIndicators"
-                            data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
 
                     </div>
 
                     <div class="carousel-inner">
 
                         <div class="carousel-item active">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1400&q=85"
-                                class="d-block w-100"
-                                alt="Vestido romântico">
-
+                            <img src="https://images.stockcake.com/public/b/7/a/b7a0f50b-6b95-4986-95e4-c11470964e94_large/gothic-garden-elegance-stockcake.jpg"
+                                class="d-block w-100" alt="Angel Dark - Jardim Gótico">
                         </div>
 
                         <div class="carousel-item">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1400&q=85"
-                                class="d-block w-100"
-                                alt="Moda alternativa">
-
+                            <img src="https://images.stockcake.com/public/b/f/2/bf2a4daf-7a53-4c07-8b86-31ec911343ee_large/dark-botanical-elegance-stockcake.jpg"
+                                class="d-block w-100" alt="Angel Dark - Estufa Gótica">
                         </div>
 
                         <div class="carousel-item">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85"
-                                class="d-block w-100"
-                                alt="Coleção Angel Dark">
-
+                            <img src="https://images.stockcake.com/public/e/c/e/ece6f5da-e2a8-46a0-b84b-9092eee8d538_large/gothic-nature-beauty-stockcake.jpg"
+                                class="d-block w-100" alt="Angel Dark - Beleza Botânica">
                         </div>
 
                     </div>
 
-                    <button class="carousel-control-prev" type="button"
-                        data-bs-target="#carouselExampleIndicators"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">
-
                         <span class="carousel-control-prev-icon"></span>
-
                     </button>
 
-                    <button class="carousel-control-next" type="button"
-                        data-bs-target="#carouselExampleIndicators"
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="next">
-
                         <span class="carousel-control-next-icon"></span>
-
                     </button>
 
                 </div>
@@ -559,7 +573,6 @@
 
         </section>
 
-        <!-- CARDS DE PRODUTOS ORIGINAIS DO PROFESSOR -->
         <section name="cards-produtos" id="colecao">
 
             <div class="container ad-section">
@@ -575,8 +588,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85"
-                                    alt="Vestido preto">
+                                <img src="https://gthic.com/cdn/shop/files/gothic_ruffled_lace-up_corset_dress_suits_gthic_1_1024x.jpg?v=1702435954"
+                                    alt="Vestido Dark Romance">
                             </div>
 
                             <div class="card-body">
@@ -599,8 +612,9 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85"
-                                    alt="Saia alternativa">
+                                <img src="https://vpsalpha.b-cdn.net/korset/ensemble-corset-jupe-longue-a-lacet.png"
+                                    alt="Saia Victorian">
+
                             </div>
 
                             <div class="card-body">
@@ -623,8 +637,9 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
-                                    alt="Look alternativo">
+                                <img src="https://shopbetenoire.com/cdn/shop/files/bete-noire-nocturne-mini-dress-front.jpg?v=1773439419&width=750"
+                                    alt="Look Midnight">
+
                             </div>
 
                             <div class="card-body">
@@ -652,8 +667,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=700&q=85"
-                                    alt="Blusa feminina">
+                                <img src="https://crazyinlove.com/cdn/shop/files/blusa-gotica-victoriana-de-encaje-con-camafeo-7279056.webp?v=1784903970&width=1200"
+                                    alt="Blusa Romantic">
                             </div>
 
                             <div class="card-body">
@@ -676,8 +691,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=700&q=85"
-                                    alt="Vestido feminino">
+                                <img src="https://crazyinlove.com/cdn/shop/files/corse-bajo-pecho-con-flores-3129592.jpg?v=1759426209&width=1500"
+                                    alt="Vestido Burgundy">
                             </div>
 
                             <div class="card-body">
@@ -700,8 +715,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1585487000160-6ebcfaae6d2c?auto=format&fit=crop&w=700&q=85"
-                                    alt="Roupa feminina">
+                                <img src="https://sissydream.com/wp-content/uploads/2023/08/181343-c7c320.jpeg"
+                                    alt="Conjunto Eclipse">
                             </div>
 
                             <div class="card-body">
@@ -729,8 +744,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=700&q=85"
-                                    alt="Moda feminina">
+                                <img src="https://crazyinlove.com/cdn/shop/files/falda-gotica-larga-de-encaje-con-volantes-5468668.webp?v=1773059531&width=1200"
+                                    alt="Coleção Dark">
                             </div>
 
                             <div class="card-body">
@@ -753,8 +768,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=85"
-                                    alt="Look romântico">
+                                <img src="https://www.hlorenzo.com/cdn/shop/files/B0013622-FA026-BLACK138816748.jpg?v=1756493459"
+                                    alt="Look Enchanted">
                             </div>
 
                             <div class="card-body">
@@ -777,8 +792,8 @@
                         <div class="card ad-card">
 
                             <div class="ad-card-image">
-                                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
-                                    alt="Moda e acessórios">
+                                <img src="https://d2bzx2vuetkzse.cloudfront.net/fit-in/0x700/outfits/29169fb5-6f45-4683-bbcb-57e6b6bc2bda.png"
+                                    alt="Acessórios Dark">
                             </div>
 
                             <div class="card-body">
@@ -803,7 +818,6 @@
 
         </section>
 
-        <!-- SOBRE NÓS: ABAS DO PROFESSOR ADAPTADAS -->
         <section name="card-sobrenos" id="sobre" class="ad-about">
 
             <div class="container ad-section">
@@ -815,29 +829,26 @@
                 <ul class="nav nav-tabs" role="tablist">
 
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" data-bs-toggle="tab"
-                            data-bs-target="#infografico" type="button">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#infografico"
+                            type="button">
                             Nossa essência
                         </button>
                     </li>
 
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" data-bs-toggle="tab"
-                            data-bs-target="#historico" type="button">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#historico" type="button">
                             Nossa história
                         </button>
                     </li>
 
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" data-bs-toggle="tab"
-                            data-bs-target="#equipe" type="button">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#equipe" type="button">
                             Equipe
                         </button>
                     </li>
 
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" data-bs-toggle="tab"
-                            data-bs-target="#contato" type="button">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#contato" type="button">
                             Contato
                         </button>
                     </li>
@@ -855,10 +866,8 @@
 
                                 <div class="col-md-4">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85"
-                                        class="img-fluid rounded-start"
-                                        alt="Coleção de roupas">
+                                    <img src="https://hardnheavy.style/cdn/shop/files/sleek-gothic-lace-tiered-dress-with-velvet-accents-001.png?v=1739949558"
+                                        class="img-fluid rounded-start" alt="Moda Romantic Gothic">
 
                                 </div>
 
@@ -898,10 +907,8 @@
 
                                 <div class="col-md-4">
 
-                                    <img
-                                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85"
-                                        class="img-fluid rounded-start"
-                                        alt="Moda alternativa">
+                                    <img src="https://www.darkinlove.com/cdn/shop/files/DW1128__000_1200x1200.jpg?v=1774244088"
+                                        class="img-fluid rounded-start" alt="Vestido gótico de renda e veludo">
 
                                 </div>
 
